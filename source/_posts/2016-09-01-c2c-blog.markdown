@@ -1,7 +1,35 @@
 ---
 layout: post
-title: "C2C blog"
+title: "C2C Joe blog"
 date: 2016-09-01 14:54:55 -0400
 comments: true
 categories: 
 ---
+C2c Blog: *Testing* 
+
+<!---
+This is a blog
+### testing
+# 
+`<addr testing embedded i code>`   
+`<addr testing embedded i code>`   
+```javascript
+Testingissssssssssssssssss   sssssssssssssssssss  sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss  ssssssssssssssssssssssssssssssssssssssssss dddddddddddddddddddddddddddddddddddddddddddddddddddd
+
+```
+Inline `code` has `back-ticks around` it.
+
+I think you should use an
+
+[I'm an inline-style link](https://www.google.com)
+
+
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+-->
