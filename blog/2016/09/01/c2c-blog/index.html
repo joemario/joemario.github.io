@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>C2C Blog - My Octopress Blog</title>
+  <title>C2C Joe Blog - My Octopress Blog</title>
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="C2c Blog: Testing
+Tips to use c2c: What: TBD Describe what c2c is Invoking it: TBD Describe how to record and report - flags to use The general flags &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">C2C Blog</h1>
+      <h1 class="entry-title">C2C Joe Blog</h1>
     
     
       <p class="meta">
@@ -85,7 +85,180 @@
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>C2c Blog: <em>Testing</em>
+Tips to use c2c:</p>
+
+<h3>What:</h3>
+
+<h6>TBD Describe what c2c is</h6>
+
+<h3>Invoking it:</h3>
+
+<h6>TBD Describe how to record and report - flags to use</h6>
+
+<p>The general flags for &ldquo;perf c2c record&rdquo; are:</p>
+
+<pre><code>-i, --input &lt;file&gt;    the input file to process
+-k, --all-kernel      collect only kernel level data
+-u, --all-user        collect only user level data
+-l, --ldlat &lt;n&gt;       setup mem-loads latency
+-g, --call-graph &lt;print_type,threshold[,print_limit],order,sort_key[,branch],value&gt;
+</code></pre>
+
+<p>The general flags for perf c2c report are:</p>
+
+<pre><code>-N, --node-info       show extra node info in report (repeat for more info)
+-d, --display ...     lcl,rmt,all
+-c, --coalesce &lt;coalesce fields&gt;
+    --full-symbols    Display full length of symbols (long symbol names may make report output harder to read)
+    --stats           Use the stdio interface
+    --stdio           Use the stdio interface
+                      coalesce fields: pid,tid,iaddr,dso
+-v, --verbose         be more verbose (show counter open errors, etc)
+</code></pre>
+
+<p>You can use &ldquo;&ndash;full-symbols&rdquo; to get full symbol names in the output.  For example:</p>
+
+<pre><code> ./perf c2c report -NN -c pid,iaddr --full-symbols --stdio 
+</code></pre>
+
+<p>Here is how to get call graph information.  Again, I do not use this initially
+because it is very difficult to see where the problems exist.
+I do use this after I&rsquo;ve identified a problem and then want to find the callers.</p>
+
+<pre><code>./perf c2c record --call-graph dwarf,8192 -F 60000 -a --all-user sleep 5
+./perf c2c report -NN -g --call-graph -c pid,iaddr --stdio 
+</code></pre>
+
+<p>   As for specifying a sample rate, there&rsquo;s no requirement to do so.  I often
+   bump the default to &ldquo;-F 60000&rdquo; to get richer samples over a shorter period of time.  If the load on the system
+   is too much or if the output file takes to long to write out, then do lower it.</p>
+
+<p>   When running on large systems (e.g. 8 socket or 16 socket systems), there can be
+   so many samples that the perf tool gets overwhelmed.<br/>
+   Some tips to help that include:<br/>
+    - Lower the sample rate.<br/>
+    - Shorten the sleep time during the record.  For ex, from &ldquo;sleep 5&rdquo; to &ldquo;sleep 3&rdquo;.<br/>
+    - Be sure the perf.data output file is being written to fast storage.</p>
+
+<h3>Parsing the output:</h3>
+
+<h6>TBD Describe how to record and report - flags to use</h6>
+
+<p>Example program at:<br/>
+  <a href="https://github.com/joemario/c2c_blog/blob/master/false_sharing_example.c">False sharing .c src file</a></p>
+
+<p>Example output at:<br/>
+  <a href="https://github.com/joemario/c2c_blog/blob/master/c2c_example_report.out">c2c output file</a></p>
+
+<p>This first table shows -tbd</p>
+
+<pre><code> 1  =================================================
+ 2              Trace Event Information
+ 3  =================================================
+ 4    Total records                     :     329219
+ 5    Locked Load/Store Operations      :      14654
+ 6    Load Operations                   :      69679
+ 7    Loads - uncacheable               :          0
+ 8    Loads - IO                        :          0
+ 9    Loads - Miss                      :       3972
+10    Loads - no mapping                :          0
+11    Load Fill Buffer Hit              :      11958
+12    Load L1D hit                      :      17235
+13    Load L2D hit                      :         21
+14    Load LLC hit                      :      14219
+15    Load Local HITM                   :       3402
+16    Load Remote HITM                  :      12757
+17    Load Remote HIT                   :       5295
+18    Load Local DRAM                   :        976
+19    Load Remote DRAM                  :       3246
+20    Load MESI State Exclusive         :       4222
+21    Load MESI State Shared            :          0
+22    Load LLC Misses                   :      22274
+23    LLC Misses to Local DRAM          :        4.4%
+24    LLC Misses to Remote DRAM         :       14.6%
+25    LLC Misses to Remote cache (HIT)  :       23.8%
+26    LLC Misses to Remote cache (HITM) :       57.3%  &lt;&lt; High percentages indicate false sharing across numa nodes
+27    Store Operations                  :     259539
+28    Store - uncacheable               :          0
+29    Store - no mapping                :         11
+30    Store L1D Hit                     :     256696
+31    Store L1D Miss                    :       2832
+32    No Page Map Rejects               :       2376
+33    Unable to parse data source       :          1
+</code></pre>
+
+<p>The next table shows -tbd</p>
+
+<pre><code>54  =================================================
+55             Shared Data Cache Line Table          
+56  =================================================
+57  #
+58  #                              Total      Rmt  ----- LLC Load Hitm -----  ---- Store Reference ----  --- Load Dram ----      LLC    Total  ----- Core Load Hit -----  -- LLC Load Hit --
+59  # Index           Cacheline  records     Hitm    Total      Lcl      Rmt    Total    L1Hit   L1Miss       Lcl       Rmt  Ld Miss    Loads       FB       L1       L2       Llc       Rmt
+60  # .....  ..................  .......  .......  .......  .......  .......  .......  .......  .......  ........  ........  .......  .......  .......  .......  .......  ........  ........
+61  #
+62        0            0x602180   149904   77.09%    12103     2269     9834   109504   109036      468       727      2657    13747    40400     5355    16154        0      2875       529
+63        1            0x602100    12128   22.20%     3951     1119     2832        0        0        0        65       200     3749    12128     5096      108        0      2056       652
+64        2  0xffff883ffb6a7e80      260    0.09%       15        3       12      161      161        0         1         1       15       99       25       50        0         6         1
+65        3  0xffffffff81aec000      157    0.07%        9        0        9        1        0        1         0         7       20      156       50       59        0        27         4
+66        4  0xffffffff81e3f540      179    0.06%        9        1        8      117       97       20         0        10       25       62       11        1        0        24         7
+</code></pre>
+
+<p>The next table shows - tbd</p>
+
+<pre><code>67  =================================================
+68        Shared Cache Line Distribution Pareto      
+69  =================================================
+70  #
+71  #        ----- HITM -----  -- Store Refs --        Data address                               ---------- cycles ----------       cpu                                     Shared                                   
+72  #   Num      Rmt      Lcl   L1 Hit  L1 Miss              Offset      Pid        Code address  rmt hitm  lcl hitm      load       cnt               Symbol                Object                  Source:Line  Node{cpu list}
+73  # .....  .......  .......  .......  .......  ..................  .......  ..................  ........  ........  ........  ........  ...................  ....................  ...........................  ....
+74  #
+75    -------------------------------------------------------------
+76        0     9834     2269   109036      468            0x602180
+77    -------------------------------------------------------------
+78            65.51%   55.88%   75.20%    0.00%                 0x0    14604            0x400b4f     27161     26039     26017         9  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:144   0{0-1,4}  1{24-25,120}  2{48,54}  3{169}
+79             0.41%    0.35%    0.00%    0.00%                 0x0    14604            0x400b56     18088     12601     26671         9  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:145   0{0-1,4}  1{24-25,120}  2{48,54}  3{169}
+80             0.00%    0.00%   24.80%  100.00%                 0x0    14604            0x400b61         0         0         0         9  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:145   0{0-1,4}  1{24-25,120}  2{48,54}  3{169}
+81             7.50%    9.92%    0.00%    0.00%                0x20    14604            0x400ba7      2470      1729      1897         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:154   1{122}  2{144}
+82            17.61%   20.89%    0.00%    0.00%                0x28    14604            0x400bc1      2294      1575      1649         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:158   2{53}  3{170}
+83             8.97%   12.96%    0.00%    0.00%                0x30    14604            0x400bdb      2325      1897      1828         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:162   0{96}  3{171}
+</code></pre>
+
+<h2>Credits</h2>
+
+<p>Don Zickus<br/>
+Jirka Olsa<br/>
+Dick Fowles<br/>
+With lots of early help from Arnaldo Carvalho de Melo, Stephane Eranian, and Andi Kleen.</p>
+
+<!---
+This is a blog
+### testing
+# 
+`<addr testing embedded i code>`   
+`<addr testing embedded i code>`   
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Testingissssssssssssssssss</span>   <span class="nx">sssssssssssssssssss</span>  <span class="nx">sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</span>  <span class="nx">ssssssssssssssssssssssssssssssssssssssssss</span> <span class="nx">dddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
+</span></code></pre></td></tr></table></div></figure>
+Inline `code` has `back-ticks around` it.
+
+I think you should use an
+
+[I'm an inline-style link](https://www.google.com)
+
+
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+-->
+
 </div>
 
 
@@ -103,6 +276,12 @@
 
 <time class='entry-date' datetime='2016-09-01T14:54:55-04:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>1</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>2:54 pm</span></time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/rhel/'>rhel</a>
+  
+</span>
 
 
     </p>
@@ -132,10 +311,39 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2016/09/01/c2c-blog/">C2C Blog</a>
+        <a href="/blog/2016/09/01/c2c-blog/">C2C Joe Blog</a>
       </li>
     
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/joemario">@joemario</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'joemario',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
