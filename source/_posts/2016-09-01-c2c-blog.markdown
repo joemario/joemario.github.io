@@ -1,0 +1,7 @@
+---
+layout: post
+title: "C2C blog"
+date: 2016-09-01 14:54:55 -0400
+comments: true
+categories: 
+---
