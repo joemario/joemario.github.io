@@ -10,7 +10,7 @@ C2c Blog: *Testing*
 Tips to use c2c:
 
 ###What:
-###### TBD Describe what c2c is  
+######  TBD Describe what c2c is  
 
 ###Invoking it:
 ###### TBD Describe how to record and report - flags to use 
