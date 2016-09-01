@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://joemario.github.io/atom.xml" rel="self"/>
   <link href="http://joemario.github.io/"/>
-  <updated>2016-09-01T14:52:48-04:00</updated>
+  <updated>2016-09-01T15:04:51-04:00</updated>
   <id>http://joemario.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[C2C Blog]]></title>
+    <link href="http://joemario.github.io/blog/2016/09/01/c2c-blog/"/>
+    <updated>2016-09-01T14:54:55-04:00</updated>
+    <id>http://joemario.github.io/blog/2016/09/01/c2c-blog</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
 </feed>
