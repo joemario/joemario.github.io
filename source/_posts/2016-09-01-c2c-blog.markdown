@@ -3,7 +3,8 @@ layout: post
 title: "C2C Joe blog"
 date: 2016-09-01 14:54:55 -0400
 comments: true
-categories: 
+published: true
+categories: [RHEL, Linux]
 ---
 C2c Blog: *Testing* 
 
