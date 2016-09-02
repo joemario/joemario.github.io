@@ -10,7 +10,9 @@
 
   
   <meta name="description" content="C2c Blog: Testing
-Tips to use c2c: What: TBD Describe what c2c is Invoking it: TBD Describe how to record and report - flags to use The general flags &hellip;">
+Tips to use c2c: Do you run your application in a NUMA environment?
+Is it multi-threaded?
+Is it multi-process with shared memory? &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,7 +74,7 @@ Tips to use c2c: What: TBD Describe what c2c is Invoking it: TBD Describe how to
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2016/09/01/c2c-blog/">C2C Joe Blog</a></h1>
+      <h1 class="entry-title"><a href="/blog/2016/09/01/c2c-blog/">C2C - False Sharing Detection in Linux Perf</a></h1>
     
     
       <p class="meta">
@@ -91,6 +93,14 @@ Tips to use c2c: What: TBD Describe what c2c is Invoking it: TBD Describe how to
   <div class="entry-content"><p>C2c Blog: <em>Testing</em>
 Tips to use c2c:</p>
 
+<p>Do you run your application in a NUMA environment?<br/>
+Is it multi-threaded?<br/>
+Is it multi-process with shared memory?<br/>
+If so, how do you know if your performance is impacted from false cacheline sharing?</p>
+
+<p>Patches will soon be posted upstream to the Linux perf tool to detect false sharing.<br/>
+Interested?  Here are the details.</p>
+
 <h3>What:</h3>
 
 <h6>TBD Describe what c2c is</h6>
@@ -98,27 +108,6 @@ Tips to use c2c:</p>
 <h3>Invoking it:</h3>
 
 <h6>TBD Describe how to record and report - flags to use</h6>
-
-<p>The general flags for &ldquo;perf c2c record&rdquo; are:</p>
-
-<pre><code>-i, --input &lt;file&gt;    the input file to process
--k, --all-kernel      collect only kernel level data
--u, --all-user        collect only user level data
--l, --ldlat &lt;n&gt;       setup mem-loads latency
--g, --call-graph &lt;print_type,threshold[,print_limit],order,sort_key[,branch],value&gt;
-</code></pre>
-
-<p>The general flags for perf c2c report are:</p>
-
-<pre><code>-N, --node-info       show extra node info in report (repeat for more info)
--d, --display ...     lcl,rmt,all
--c, --coalesce &lt;coalesce fields&gt;
-    --full-symbols    Display full length of symbols (long symbol names may make report output harder to read)
-    --stats           Use the stdio interface
-    --stdio           Use the stdio interface
-                      coalesce fields: pid,tid,iaddr,dso
--v, --verbose         be more verbose (show counter open errors, etc)
-</code></pre>
 
 <p>You can use &ldquo;&ndash;full-symbols&rdquo; to get full symbol names in the output.  For example:</p>
 
@@ -149,10 +138,13 @@ I do use this after I&rsquo;ve identified a problem and then want to find the ca
 <h6>TBD Describe how to record and report - flags to use</h6>
 
 <p>Example program at:<br/>
-  <a href="https://github.com/joemario/c2c_blog/blob/master/false_sharing_example.c">False sharing .c src file</a></p>
+  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/false_sharing_example.c">False sharing .c src file</a></p>
 
 <p>Example output at:<br/>
-  <a href="https://github.com/joemario/c2c_blog/blob/master/c2c_example_report.out">c2c output file</a></p>
+  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/c2c_example_report.out">c2c output file</a></p>
+
+<p>Example output at:<br/>
+  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/perf-c2c-usage.out">c2c usage flags</a></p>
 
 <p>This first table shows -tbd</p>
 
@@ -282,7 +274,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2016/09/01/c2c-blog/">C2C Joe Blog</a>
+        <a href="/blog/2016/09/01/c2c-blog/">C2C - False Sharing Detection in Linux Perf</a>
       </li>
     
   </ul>

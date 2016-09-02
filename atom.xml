@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://joemario.github.io/atom.xml" rel="self"/>
   <link href="http://joemario.github.io/"/>
-  <updated>2016-09-01T18:19:58-04:00</updated>
+  <updated>2016-09-02T12:58:39-04:00</updated>
   <id>http://joemario.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,12 +14,20 @@
 
   
   <entry>
-    <title type="html"><![CDATA[C2C Joe Blog]]></title>
+    <title type="html"><![CDATA[C2C - False Sharing Detection in Linux Perf]]></title>
     <link href="http://joemario.github.io/blog/2016/09/01/c2c-blog/"/>
     <updated>2016-09-01T14:54:55-04:00</updated>
     <id>http://joemario.github.io/blog/2016/09/01/c2c-blog</id>
     <content type="html"><![CDATA[<p>C2c Blog: <em>Testing</em>
 Tips to use c2c:</p>
+
+<p>Do you run your application in a NUMA environment?<br/>
+Is it multi-threaded?<br/>
+Is it multi-process with shared memory?<br/>
+If so, how do you know if your performance is impacted from false cacheline sharing?</p>
+
+<p>Patches will soon be posted upstream to the Linux perf tool to detect false sharing.<br/>
+Interested?  Here are the details.</p>
 
 <h3>What:</h3>
 
@@ -28,27 +36,6 @@ Tips to use c2c:</p>
 <h3>Invoking it:</h3>
 
 <h6>TBD Describe how to record and report - flags to use</h6>
-
-<p>The general flags for &ldquo;perf c2c record&rdquo; are:</p>
-
-<pre><code>-i, --input &lt;file&gt;    the input file to process
--k, --all-kernel      collect only kernel level data
--u, --all-user        collect only user level data
--l, --ldlat &lt;n&gt;       setup mem-loads latency
--g, --call-graph &lt;print_type,threshold[,print_limit],order,sort_key[,branch],value&gt;
-</code></pre>
-
-<p>The general flags for perf c2c report are:</p>
-
-<pre><code>-N, --node-info       show extra node info in report (repeat for more info)
--d, --display ...     lcl,rmt,all
--c, --coalesce &lt;coalesce fields&gt;
-    --full-symbols    Display full length of symbols (long symbol names may make report output harder to read)
-    --stats           Use the stdio interface
-    --stdio           Use the stdio interface
-                      coalesce fields: pid,tid,iaddr,dso
--v, --verbose         be more verbose (show counter open errors, etc)
-</code></pre>
 
 <p>You can use &ldquo;&ndash;full-symbols&rdquo; to get full symbol names in the output.  For example:</p>
 
@@ -79,10 +66,13 @@ I do use this after I&rsquo;ve identified a problem and then want to find the ca
 <h6>TBD Describe how to record and report - flags to use</h6>
 
 <p>Example program at:<br/>
-  <a href="https://github.com/joemario/c2c_blog/blob/master/false_sharing_example.c">False sharing .c src file</a></p>
+  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/false_sharing_example.c">False sharing .c src file</a></p>
 
 <p>Example output at:<br/>
-  <a href="https://github.com/joemario/c2c_blog/blob/master/c2c_example_report.out">c2c output file</a></p>
+  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/c2c_example_report.out">c2c output file</a></p>
+
+<p>Example output at:<br/>
+  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/perf-c2c-usage.out">c2c usage flags</a></p>
 
 <p>This first table shows -tbd</p>
 
