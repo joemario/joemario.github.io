@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C2C Joe blog"
+title: "C2C - false sharing detection in Linux perf"
 date: 2016-09-01 14:54:55 -0400
 comments: true
 published: true
@@ -9,32 +9,19 @@ categories: [RHEL, Linux]
 C2c Blog: *Testing* 
 Tips to use c2c:
 
+Do you run your application in a NUMA environment?  
+Is it multi-threaded?  
+Is it multi-process with shared memory?  
+If so, how do you know if your performance is impacted from false cacheline sharing?  
+
+Patches will soon be posted upstream to the Linux perf tool to detect false sharing.  
+Interested?  Here are the details.  
+
 ###What:
 ######  TBD Describe what c2c is  
 
 ###Invoking it:
 ###### TBD Describe how to record and report - flags to use 
-
-The general flags for "perf c2c record" are:
-
-    -i, --input <file>    the input file to process
-    -k, --all-kernel      collect only kernel level data
-    -u, --all-user        collect only user level data
-    -l, --ldlat <n>       setup mem-loads latency
-    -g, --call-graph <print_type,threshold[,print_limit],order,sort_key[,branch],value>
-
-
-The general flags for perf c2c report are:
-
-    -N, --node-info       show extra node info in report (repeat for more info)
-    -d, --display ...     lcl,rmt,all
-    -c, --coalesce <coalesce fields>
-        --full-symbols    Display full length of symbols (long symbol names may make report output harder to read)
-        --stats           Use the stdio interface
-        --stdio           Use the stdio interface
-                          coalesce fields: pid,tid,iaddr,dso
-    -v, --verbose         be more verbose (show counter open errors, etc)
-
 
 
 You can use "--full-symbols" to get full symbol names in the output.  For example:
@@ -64,10 +51,13 @@ I do use this after I've identified a problem and then want to find the callers.
 ###Parsing the output:
 ###### TBD Describe how to record and report - flags to use 
 Example program at:  
-  [False sharing .c src file](https://github.com/joemario/c2c_blog/blob/master/false_sharing_example.c)
+  [False sharing .c src file](https://github.com/joemario/perf-c2c-usage-files/blob/master/false_sharing_example.c)
 
 Example output at:  
-  [c2c output file](https://github.com/joemario/c2c_blog/blob/master/c2c_example_report.out)
+  [c2c output file](https://github.com/joemario/perf-c2c-usage-files/blob/master/c2c_example_report.out)
+
+Example output at:  
+  [c2c usage flags](https://github.com/joemario/perf-c2c-usage-files/blob/master/perf-c2c-usage.out)
 
 This first table shows -tbd
 
