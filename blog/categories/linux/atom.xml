@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | My Octopress Blog]]></title>
   <link href="http://joemario.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://joemario.github.io/"/>
-  <updated>2016-09-02T12:58:39-04:00</updated>
+  <updated>2016-09-02T21:16:32-04:00</updated>
   <id>http://joemario.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -18,100 +18,87 @@
     <link href="http://joemario.github.io/blog/2016/09/01/c2c-blog/"/>
     <updated>2016-09-01T14:54:55-04:00</updated>
     <id>http://joemario.github.io/blog/2016/09/01/c2c-blog</id>
-    <content type="html"><![CDATA[<p>C2c Blog: <em>Testing</em>
-Tips to use c2c:</p>
+    <content type="html"><![CDATA[<p>Do you run your application in a NUMA environment?
+Is it multi-threaded?
+Is it multi-process with shared memory?
+If so, is your performance impacted by false sharing?</p>
 
-<p>Do you run your application in a NUMA environment?<br/>
-Is it multi-threaded?<br/>
-Is it multi-process with shared memory?<br/>
-If so, how do you know if your performance is impacted from false cacheline sharing?</p>
+<p>Now there&rsquo;s a way to easily find out.
+We&rsquo;re posting patches for a new feature to the Linux perf tool, called &ldquo;c2c&rdquo; for cache-2-cache.<br/>
+We at Red Hat have been running the
+development prototype of c2c on lots of big Linux applications and it&rsquo;s uncovered many hot false
+sharing cachelines.</p>
 
-<p>Patches will soon be posted upstream to the Linux perf tool to detect false sharing.<br/>
-Interested?  Here are the details.</p>
+<p>I&rsquo;ve been playing with this tool quite a bit.  It is pretty cool.  Let me share a little about what it is and how to use it.</p>
 
-<h3>What:</h3>
+<p>At a high level, &ldquo;perf c2c&rdquo; will show you:<br/>
+  * The cachelines where false sharing was detected. <br/>
+  * The readers and writers to those cachelines, and the offsets where those accesses occurred. <br/>
+  * The pid, tid, instruction addr, function name, binary object name for those readers and writers. <br/>
+  * The source file and line number for each reader and writer.<br/>
+  * The average load latency for the loads to those cachelines.<br/>
+  * Which numa nodes the samples a cacheline came from and which cpus were involved.</p>
 
-<h6>TBD Describe what c2c is</h6>
+<p>Using perf c2c is similar to using the Linux perf tool today.<br/>
+First collect data with &ldquo;perf c2c record <flags>&rdquo;
+Then generate a report output with &ldquo;perf c2c report <flags>&rdquo;</p>
 
-<h3>Invoking it:</h3>
-
-<h6>TBD Describe how to record and report - flags to use</h6>
-
-<p>You can use &ldquo;&ndash;full-symbols&rdquo; to get full symbol names in the output.  For example:</p>
-
-<pre><code> ./perf c2c report -NN -c pid,iaddr --full-symbols --stdio 
-</code></pre>
-
-<p>Here is how to get call graph information.  Again, I do not use this initially
-because it is very difficult to see where the problems exist.
-I do use this after I&rsquo;ve identified a problem and then want to find the callers.</p>
-
-<pre><code>./perf c2c record --call-graph dwarf,8192 -F 60000 -a --all-user sleep 5
-./perf c2c report -NN -g --call-graph -c pid,iaddr --stdio 
-</code></pre>
-
-<p>   As for specifying a sample rate, there&rsquo;s no requirement to do so.  I often
-   bump the default to &ldquo;-F 60000&rdquo; to get richer samples over a shorter period of time.  If the load on the system
-   is too much or if the output file takes to long to write out, then do lower it.</p>
-
-<p>   When running on large systems (e.g. 8 socket or 16 socket systems), there can be
-   so many samples that the perf tool gets overwhelmed.<br/>
-   Some tips to help that include:<br/>
-    - Lower the sample rate.<br/>
-    - Shorten the sleep time during the record.  For ex, from &ldquo;sleep 5&rdquo; to &ldquo;sleep 3&rdquo;.<br/>
-    - Be sure the perf.data output file is being written to fast storage.</p>
-
-<h3>Parsing the output:</h3>
-
-<h6>TBD Describe how to record and report - flags to use</h6>
-
-<p>Example program at:<br/>
-  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/false_sharing_example.c">False sharing .c src file</a></p>
-
-<p>Example output at:<br/>
-  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/c2c_example_report.out">c2c output file</a></p>
-
-<p>Example output at:<br/>
+<p>Before covering the output data, here is a &ldquo;how to&rdquo; for the flags to use when calling &ldquo;perf c2c&rdquo;:<br/>
   <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/perf-c2c-usage.out">c2c usage flags</a></p>
 
-<p>This first table shows -tbd</p>
+<p>Then here&rsquo;s an output file from a recent &ldquo;perf c2c&rdquo; run I did:<br/>
+  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/c2c_example_report.out">c2c output file</a></p>
+
+<p>And, if you want to play with it yourself, here&rsquo;s a simple source file to generate lots of false sharing.<br/>
+  <a href="https://github.com/joemario/perf-c2c-usage-files/blob/master/false_sharing_example.c">False sharing .c src file</a></p>
+
+<h5>First I&rsquo;ll go over the output file to highlight the interesting fields.</h5>
+
+<p>This first table in the output file gives a high level summary of all the load and store samples collected.
+It is interesting to see where your program&rsquo;s load instructions got their data.<br/>
+Notice the term &ldquo;HITM&rdquo;, which stands for a load that hit in a modified cacheline. That&rsquo;s the key that false
+sharing has occured.  Remote HITMs, meaning across numa nodes, are the most expensive - especially when
+there are lots of readers and writers.</p>
 
 <pre><code> 1  =================================================
  2              Trace Event Information
  3  =================================================
- 4    Total records                     :     329219
+ 4    Total records                     :     329219  &lt;&lt; Total loads and stores sampled.
  5    Locked Load/Store Operations      :      14654
- 6    Load Operations                   :      69679
+ 6    Load Operations                   :      69679  &lt;&lt; Total loads
  7    Loads - uncacheable               :          0
  8    Loads - IO                        :          0
  9    Loads - Miss                      :       3972
 10    Loads - no mapping                :          0
 11    Load Fill Buffer Hit              :      11958
-12    Load L1D hit                      :      17235
+12    Load L1D hit                      :      17235  &lt;&lt; loads that hit in the L1 cache.
 13    Load L2D hit                      :         21
-14    Load LLC hit                      :      14219
-15    Load Local HITM                   :       3402
-16    Load Remote HITM                  :      12757
+14    Load LLC hit                      :      14219  &lt;&lt; loads that hit in the last level cache (LLC).
+15    Load Local HITM                   :       3402  &lt;&lt; loads that hit in a modified cache on the same numa node (local HITM).
+16    Load Remote HITM                  :      12757  &lt;&lt; loads that hit in a modified cache on a remote numa node (remote HITM).
 17    Load Remote HIT                   :       5295
-18    Load Local DRAM                   :        976
-19    Load Remote DRAM                  :       3246
-20    Load MESI State Exclusive         :       4222
+18    Load Local DRAM                   :        976  &lt;&lt; loads that hit in the local node's main memory.
+19    Load Remote DRAM                  :       3246  &lt;&lt; loads that hit in a remote node's main memory.
+20    Load MESI State Exclusive         :       4222 
 21    Load MESI State Shared            :          0
-22    Load LLC Misses                   :      22274
-23    LLC Misses to Local DRAM          :        4.4%
-24    LLC Misses to Remote DRAM         :       14.6%
-25    LLC Misses to Remote cache (HIT)  :       23.8%
-26    LLC Misses to Remote cache (HITM) :       57.3%  &lt;&lt; High percentages indicate false sharing across numa nodes
-27    Store Operations                  :     259539
+22    Load LLC Misses                   :      22274  &lt;&lt; loads not found in any local node caches.
+23    LLC Misses to Local DRAM          :        4.4% &lt;&lt; % hitting in local node's main memory.
+24    LLC Misses to Remote DRAM         :       14.6% &lt;&lt; % hitting in a remote node's main memory.
+25    LLC Misses to Remote cache (HIT)  :       23.8% &lt;&lt; % hitting in a clean cache in a remote node.
+26    LLC Misses to Remote cache (HITM) :       57.3% &lt;&lt; % hitting in remote modified cache. (most expensive - false sharing)
+27    Store Operations                  :     259539  &lt;&lt; store instruction sample count
 28    Store - uncacheable               :          0
 29    Store - no mapping                :         11
-30    Store L1D Hit                     :     256696
-31    Store L1D Miss                    :       2832
+30    Store L1D Hit                     :     256696  &lt;&lt; stores that got L1 cache when requested.
+31    Store L1D Miss                    :       2832  &lt;&lt; stores that couldn't get the L1 cache when requested (L1 miss).
 32    No Page Map Rejects               :       2376
 33    Unable to parse data source       :          1
 </code></pre>
 
-<p>The next table shows -tbd</p>
+<p>The second table, (below), in the output file gives a brief one-line summary of the hottest cachelines where false sharing was detected.
+It&rsquo;s sorted by which line had the most remote HITMs (or local HITMs if you select that sort option).  It gives a nice high level sense
+for the load and store activity for each cacheline. <br/>
+I look to see if a cacheline has a high number of &ldquo;Rmt LLC Load Hitm&rsquo;s&rdquo;.  If so, it&rsquo;s time to dig further.</p>
 
 <pre><code>54  =================================================
 55             Shared Data Cache Line Table          
@@ -128,7 +115,21 @@ I do use this after I&rsquo;ve identified a problem and then want to find the ca
 66        4  0xffffffff81e3f540      179    0.06%        9        1        8      117       97       20         0        10       25       62       11        1        0        24         7
 </code></pre>
 
-<p>The next table shows - tbd</p>
+<p>Next is the Pareto table, which shows lots of valuable information about each contended cacheline. This is the most important table in the output.
+I only show three cachelines here to keep this blog simple. Here&rsquo;s what&rsquo;s in it.</p>
+
+<p>&nbsp;&nbsp;&nbsp; * Lines 71 and 72 are the column headers for what&rsquo;s happening in each cacheline.<br/>
+&nbsp;&nbsp;&nbsp; * Line 76 shows the HITM and store activity for each cacheline - first with counts for load<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and store activity, followed by the cacheline virtual data address.<br/>
+&nbsp;&nbsp;&nbsp; * Then there&rsquo;s the data address column.  Line 76 shows the virtual address of the cacheline.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each row underneath is represents the offset into the cachline where those accesses occured.<br/>
+&nbsp;&nbsp;&nbsp; * The next column shows the pid, and/or the thread id (tid) if you selected that for the output. <br/>
+&nbsp;&nbsp;&nbsp; * Following is the instruction pointer code address. <br/>
+&nbsp;&nbsp;&nbsp; * Next are three columns showing the average load latencies.  I always look here for long<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; latency averages, which is a sign for how painful the contention was to that cacheline.<br/>
+&nbsp;&nbsp; * The &ldquo;cpu cnt&rdquo; column shows how many different cpus samples came from.<br/>
+&nbsp;&nbsp; * Then there&rsquo;s the function name, binary object name, source file and line number.<br/>
+&nbsp;&nbsp; * The last column shows for each node, the specific cpus that samples came from.</p>
 
 <pre><code>67  =================================================
 68        Shared Cache Line Distribution Pareto      
@@ -147,30 +148,107 @@ I do use this after I&rsquo;ve identified a problem and then want to find the ca
 81             7.50%    9.92%    0.00%    0.00%                0x20    14604            0x400ba7      2470      1729      1897         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:154   1{122}  2{144}
 82            17.61%   20.89%    0.00%    0.00%                0x28    14604            0x400bc1      2294      1575      1649         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:158   2{53}  3{170}
 83             8.97%   12.96%    0.00%    0.00%                0x30    14604            0x400bdb      2325      1897      1828         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:162   0{96}  3{171}
+
+84    -------------------------------------------------------------
+85        1     2832     1119        0        0            0x602100
+86    -------------------------------------------------------------
+87            29.13%   36.19%    0.00%    0.00%                0x20    14604            0x400bb3      1964      1230      1788         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:155   1{122}  2{144}
+88            43.68%   34.41%    0.00%    0.00%                0x28    14604            0x400bcd      2274      1566      1793         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:159   2{53}  3{170}
+89            27.19%   29.40%    0.00%    0.00%                0x30    14604            0x400be7      2045      1247      2011         2  [.] read_write_func  no_false_sharing.exe  false_sharing_example.c:163   0{96}  3{171}
+
+90    -------------------------------------------------------------
+91        2       12        3      161        0  0xffff883ffb6a7e80
+92    -------------------------------------------------------------
+93            58.33%  100.00%    0.00%    0.00%                 0x0    14604  0xffffffff810cf16d      1380       941      1229         9  [k] task_tick_fair              [kernel.kallsyms]  atomic64_64.h:21   0{0,4,96}  1{25,120,122}  2{53}  3{170-171}
+94            16.67%    0.00%   98.76%    0.00%                 0x0    14604  0xffffffff810c9379      1794         0       625        13  [k] update_cfs_rq_blocked_load  [kernel.kallsyms]  atomic64_64.h:45   0{1,4,96}  1{25,120,122}  2{48,53-54,144}  3{169-171}
+95            16.67%    0.00%    0.00%    0.00%                 0x0    14604  0xffffffff810ce098      1382         0       867        12  [k] update_cfs_shares           [kernel.kallsyms]  atomic64_64.h:21   0{1,4,96}  1{25,120,122}  2{53-54,144}  3{169-171}
+96             8.33%    0.00%    0.00%    0.00%                 0x8    14604  0xffffffff810cf18c      2560         0       679         8  [k] task_tick_fair              [kernel.kallsyms]  atomic.h:26        0{4,96}  1{24-25,120,122}  2{54}  3{170}
+97             0.00%    0.00%    1.24%    0.00%                 0x8    14604  0xffffffff810cf14f         0         0         0         2  [k] task_tick_fair              [kernel.kallsyms]  atomic.h:50        2{48,53}
 </code></pre>
 
-<h2>Credits</h2>
+<h4>How I often use &ldquo;perf c2c&rdquo;</h4>
 
-<p>Don Zickus<br/>
-Jirka Olsa<br/>
-Dick Fowles<br/>
-With lots of early help from Arnaldo Carvalho de Melo, Stephane Eranian, and Andi Kleen.</p>
+<p>Here are the flags I most commonly use.</p>
+
+<pre><code>   perf c2c record -F 60000 -a --all-user sleep 5
+   perf c2c record -F 60000 -a --all-user sleep 3     // or to sample for a shorter time.
+   perf c2c record -F 60000 -a --all-kernel sleep 3   // or to only gather kernel samples.
+   perf c2c record -F 60000 -a -u --ldlat 50 sleep 3  // or to collect only loads &gt;= 50 cycles of load latency (30 is the ldlat default).
+</code></pre>
+
+<p>To generate report files, you can use the graphical tui report or send the output to stdout:</p>
+
+<pre><code> perf report -NN -c pid,iaddr                 // to use the tui interactive report
+ perf report -NN -c pid,iaddr --stdio         // or to send the output to stdout
+ perf report -NN -d lcl -c pid,iaddr --stdio  // or to sort on local hitms
+</code></pre>
+
+<p>By default, symbol names are truncated to a fixed width - for readability.<br/>
+You can use the &ldquo;&ndash;full-symbols&rdquo; flag to get full symbol names in the output.<br/>
+For example:</p>
+
+<pre><code> ./perf c2c report -NN -c pid,iaddr --full-symbols --stdio 
+</code></pre>
+
+<p>Sometimes it&rsquo;s valuable to know who the callers are.  Here is how to get call graph information.<br/>
+I never generate call graph info initially because it emits so much data, it makes it very difficult to
+see if and where a false sharing problem exists.  I find the problem first without call graphs, then if needed I&rsquo;ll rerun with call graphs.</p>
+
+<pre><code>./perf c2c record --call-graph dwarf,8192 -F 60000 -a --all-user sleep 5
+./perf c2c report -NN -g --call-graph -c pid,iaddr --stdio 
+</code></pre>
+
+<p>I&rsquo;ll sometimes bump the perf sample rate with &ldquo;-F 60000&rdquo;  or &ldquo;-F 80000&rdquo;.<br/>
+There&rsquo;s no requirement to do so, but it is a good way to get a richer sample collection in a shorter period of time.
+If you do, it&rsquo;s helpful to bump the kernel&rsquo;s perf sample rate up with the following two echo commands.  (see dmesg for &ldquo;perf interrupt took too long &hellip;&rdquo; sample lowering entries).</p>
+
+<pre><code> echo    500 &gt; /proc/sys/kernel/perf_cpu_time_max_percent
+ echo 100000 &gt; /proc/sys/kernel/perf_event_max_sample_rate
+ &lt;then do your "perf c2c record" here&gt;
+ echo     50 &gt; /proc/sys/kernel/perf_cpu_time_max_percent
+</code></pre>
+
+<p>   When running on larger systems (e.g. 4, 8 or 16 socket systems), there can be
+   so many samples that the perf tool can consume lots of cpu time and the perf.data file grows significantly.<br/>
+   Some tips to help that include:<br/>
+    - Bump the ldlat from the default of 30 to 50.  This free&rsquo;s perf to skip faster non-interesting loads. <br/>
+    - Lower the sample rate.<br/>
+    - Shorten the sleep time during the record.  For ex, from &ldquo;sleep 5&rdquo; to &ldquo;sleep 3&rdquo;.</p>
+
+<h4>The raw samples can be helpful.</h4>
+
+<p>I&rsquo;ve often found it valuable to take a peek at the raw instruction samples contained in the perf.data file (the one generated by the &ldquo;perf c2c record&rdquo;).
+You can get those raw samples using &ldquo;perf script&rdquo;.  See man perf-script.
+The output may be cryptic, but you can sort on the load weight (5th column) to see which loads suffered the most from false sharing contention and took the longest to execute.</p>
+
+<h4>Want to give it a spin?</h4>
+
+<p>You can grab the patches from Jiri Olsa&rsquo;s git repo at:</p>
+
+<pre><code> git://git.kernel.org/pub/scm/linux/kernel/git/jolsa/perf.git  
+ branch perf/c2c  
+</code></pre>
+
+<h4>Lastly, this was a collective effort.</h4>
+
+<p>Although Don Zickus, Dick Fowles and I worked together to get this implemented,
+we got lots of early help from Arnaldo Carvalho de Melo, Stephane Eranian, Jiri Olsa and Andi Kleen.<br/>
+Additionally Jiri has been heavily involved recently integrating the c2c functionality into perf.<br/>
+A big thanks to all of you for helping to pull this together!</p>
 
 <!---
-This is a blog
+markdown stuff 
 ### testing
 # 
 `<addr testing embedded i code>`   
 `<addr testing embedded i code>`   
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Testingissssssssssssssssss</span>   <span class="nx">sssssssssssssssssss</span>  <span class="nx">sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</span>  <span class="nx">ssssssssssssssssssssssssssssssssssssssssss</span> <span class="nx">dddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
-</span></code></pre></td></tr></table></div></figure>
+```javascript
+
+```
 Inline `code` has `back-ticks around` it.
 
-I think you should use an
 
 [I'm an inline-style link](https://www.google.com)
-
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
