@@ -16,4 +16,10 @@
 <url>
 <loc>http://joemario.github.io/blog/categories/linux/</loc>
 </url>
+<url>
+<loc>http://joemario.github.io/blog/categories/perf-c2c/</loc>
+</url>
+<url>
+<loc>http://joemario.github.io/blog/categories/cacheline-false-sharing/</loc>
+</url>
 </urlset>
