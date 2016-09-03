@@ -4,7 +4,7 @@ title: "C2C - false sharing detection in Linux perf"
 date: 2016-09-01 14:54:55 -0400
 comments: true
 published: true
-categories: [RHEL, Linux]
+categories: [RHEL, Linux, PERF C2C, CACHELINE FALSE SHARING]
 ---
 
 Do you run your application in a NUMA environment?
