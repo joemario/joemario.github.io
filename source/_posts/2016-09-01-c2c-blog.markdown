@@ -173,15 +173,15 @@ By default, symbol names are truncated to a fixed width - for readability.
 You can use the "--full-symbols" flag to get full symbol names in the output.  
 For example:
 
-     ./perf c2c report -NN -c pid,iaddr --full-symbols --stdio 
+     perf c2c report -NN -c pid,iaddr --full-symbols --stdio 
 
 
 Sometimes it's valuable to know who the callers are.  Here is how to get call graph information.  
 I never generate call graph info initially because it emits so much data, it makes it very difficult to 
 see if and where a false sharing problem exists.  I find the problem first without call graphs, then if needed I'll rerun with call graphs.
 
-    ./perf c2c record --call-graph dwarf,8192 -F 60000 -a --all-user sleep 5
-    ./perf c2c report -NN -g --call-graph -c pid,iaddr --stdio 
+    perf c2c record --call-graph dwarf,8192 -F 60000 -a --all-user sleep 5
+    perf c2c report -NN -g --call-graph -c pid,iaddr --stdio 
 
 
 I'll sometimes bump the perf sample rate with "-F 60000"  or "-F 80000".  
