@@ -4,10 +4,10 @@
   <title><![CDATA[Category: Rhel | My Octopress Blog]]></title>
   <link href="http://joemario.github.io/blog/categories/rhel/atom.xml" rel="self"/>
   <link href="http://joemario.github.io/"/>
-  <updated>2016-09-02T21:26:40-04:00</updated>
+  <updated>2016-09-12T15:32:17-04:00</updated>
   <id>http://joemario.github.io/</id>
   <author>
-    <name><![CDATA[Joe Mario]]></name>
+    <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -187,16 +187,20 @@ I only show three cachelines here to keep this blog simple. Here&rsquo;s what&rs
 You can use the &ldquo;&ndash;full-symbols&rdquo; flag to get full symbol names in the output.<br/>
 For example:</p>
 
-<pre><code> ./perf c2c report -NN -c pid,iaddr --full-symbols --stdio 
+<pre><code> perf c2c report -NN -c pid,iaddr --full-symbols --stdio 
 </code></pre>
+
+<h4>Finding the callers to these cachelines:</h4>
 
 <p>Sometimes it&rsquo;s valuable to know who the callers are.  Here is how to get call graph information.<br/>
 I never generate call graph info initially because it emits so much data, it makes it very difficult to
 see if and where a false sharing problem exists.  I find the problem first without call graphs, then if needed I&rsquo;ll rerun with call graphs.</p>
 
-<pre><code>./perf c2c record --call-graph dwarf,8192 -F 60000 -a --all-user sleep 5
-./perf c2c report -NN -g --call-graph -c pid,iaddr --stdio 
+<pre><code>perf c2c record --call-graph dwarf,8192 -F 60000 -a --all-user sleep 5
+perf c2c report -NN -g --call-graph -c pid,iaddr --stdio 
 </code></pre>
+
+<h4>Does bumping perf&rsquo;s sample rate help?</h4>
 
 <p>I&rsquo;ll sometimes bump the perf sample rate with &ldquo;-F 60000&rdquo;  or &ldquo;-F 80000&rdquo;.<br/>
 There&rsquo;s no requirement to do so, but it is a good way to get a richer sample collection in a shorter period of time.
@@ -208,12 +212,58 @@ If you do, it&rsquo;s helpful to bump the kernel&rsquo;s perf sample rate up wit
  echo     50 &gt; /proc/sys/kernel/perf_cpu_time_max_percent
 </code></pre>
 
+<h4>What to do when perf drowns in excessive samples:</h4>
+
 <p>   When running on larger systems (e.g. 4, 8 or 16 socket systems), there can be
-   so many samples that the perf tool can consume lots of cpu time and the perf.data file grows significantly.<br/>
+   so many samples that the perf tool can consume lots of cpu time and the perf.data file size grows significantly.<br/>
    Some tips to help that include:<br/>
-    - Bump the ldlat from the default of 30 to 50.  This free&rsquo;s perf to skip faster non-interesting loads. <br/>
+    - Bump the ldlat from the default of 30 to 50.  This free&rsquo;s perf to skip the faster non-interesting loads. <br/>
     - Lower the sample rate.<br/>
-    - Shorten the sleep time during the record.  For ex, from &ldquo;sleep 5&rdquo; to &ldquo;sleep 3&rdquo;.</p>
+    - Shorten the sleep time during the &ldquo;perf record&rdquo; window.  For ex, from &ldquo;sleep 5&rdquo; to &ldquo;sleep 3&rdquo;.</p>
+
+<h4>What I’ve learned by using C2C on numerous applications:</h4>
+
+<p>It’s common to look at any performance tool output and ask ‘what does all this data mean?’.  <br/>
+Here are some things I&rsquo;ve learned.  Hopefully they&rsquo;re of help.</p>
+
+<p>&nbsp;&nbsp;&nbsp;    *         I tend to run “perf c2c” for 3, 5, or 10 seconds.  Running it any longer may take you <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from seeing concurrent false sharing to seeing cacheline accesses which are <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disjoint in time.<br/>
+&nbsp;&nbsp;&nbsp;    *         If you’re not interested in kernel samples, you’ll get better samples in your program by <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specifying –all—user. &nbsp; Conversely, specifying &ndash;all-kernel is useful when focusing on the <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kernel.    <br/>
+&nbsp;&nbsp;&nbsp;    *         On busy systems with high cpu counts , like >148 cpus, setting –ldlat to a higher value <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(like 50 or even 70) may enable perf to generate richer C2C samples.<br/>
+&nbsp;&nbsp;&nbsp;    *         Look at the Trace Event table at the top, specifically the “LLC Misses to Remote cache HITM” <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number.  If it’s not close to zero, then there&rsquo;s likely worthwhile false sharing to pursue resolving. <br/>
+&nbsp;&nbsp;&nbsp;    *         Most of the time the top one, two, or three cachelines in the Shared Cache Line Distribution <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pareto table are the ones to focus on.<br/>
+&nbsp;&nbsp;&nbsp;    *         However, sometimes you’ll see the same code from multiple threads causing “less hot” <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contention, but you will see it on multiple cachelines for different data addresses. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Even though any one of those lines are less hot individually, fixing them is often a <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;win because the benefit is spread across many cachelines.  This can also happen with <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;different processes executing the same code accessing shared memory. <br/>
+&nbsp;&nbsp;&nbsp;    *         In the Shared Cache Line Distribution Pareto table, if you see long load average load latencies, <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it&rsquo;s often a giveaway that false sharing contention is heavy and is hurting performance. <br/>
+&nbsp;&nbsp;&nbsp;    *         Then looking to see what nodes and cpus the samples for those accesses are coming from  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can often be a valuable guide to numa-pinning your processes or memory. <br/>
+&nbsp;&nbsp;&nbsp; <br/>
+For processes using shared memory, it is possible for them to use different virtual addresses, <br/>
+all pointing to (and contending with) the same shared memory location.  They will show   <br/>
+up in the Pareto table as different cachelines, but in fact they are the same cacheline. <br/>
+These can be tricky to spot.  I usually uncover these by first looking to see that shared
+memory is being used, and then looking for similar patterns in the information provided <br/>
+for each cacheline.</p>
+
+<p>Last, the Shared Cache Line Distribution Pareto table can also provide great insight into any <br/>
+ill-aligned hot data.  <br/>
+For example: <br/>
+&nbsp;&nbsp;&nbsp;   *         It’s easy to spot heavily modified variables that need to be placed into their own cachelines. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will enable them to be less contended (and run faster), and it will help accesses to  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the other variables that shared their cacheline to not be slowed down. <br/>
+&nbsp;&nbsp;&nbsp;   *         It’s easy to spot hot locks or mutexes that are unaligned and spill into multiple cachelines. <br/>
+&nbsp;&nbsp;&nbsp;   *         It’s easy to spot “read mostly” variables which can be grouped together into their own <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cachelines.</p>
 
 <h4>The raw samples can be helpful.</h4>
 
@@ -231,7 +281,7 @@ The output may be cryptic, but you can sort on the load weight (5th column) to s
 
 <h4>Lastly, this was a collective effort.</h4>
 
-<p>Although Don Zickus, Dick Fowles and I worked together to get this implemented,
+<p>Although Don Zickus, Dick Fowles and Joe Mario worked together to get this implemented,
 we got lots of early help from Arnaldo Carvalho de Melo, Stephane Eranian, Jiri Olsa and Andi Kleen.<br/>
 Additionally Jiri has been heavily involved recently integrating the c2c functionality into perf.<br/>
 A big thanks to all of you for helping to pull this together!</p>
