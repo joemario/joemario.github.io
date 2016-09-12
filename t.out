@@ -1343,3 +1343,679 @@ Configuration file: /home/git/octopress/_config.yml
       Regenerating: 1 file(s) changed at 2016-09-02 21:25:02 ...done in 0.404959567 seconds.
       Regenerating: 1 file(s) changed at 2016-09-02 21:25:39 ...done in 0.415569131 seconds.
       Regenerating: 1 file(s) changed at 2016-09-02 21:26:39 ...done in 0.415694931 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:20:39 ...done in 0.413306018 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:20:39 ...done in 0.415247052 seconds.
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 27517 0.0015
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /stylesheets/screen.css HTTP/1.1" 200 40215 0.0019
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 200 7020 0.0008
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /javascripts/octopress.js HTTP/1.1" 200 8357 0.0008
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /javascripts/github.js HTTP/1.1" 200 1113 0.0010
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /favicon.png HTTP/1.1" 200 211 0.0005
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 200 566 0.0006
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 200 16921 0.0025
+::1 - - [12/Sep/2016:14:20:46 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 200 2475 0.0006
+      Regenerating: 1 file(s) changed at 2016-09-12 14:21:18 ...done in 0.412351489 seconds.
+::1 - - [12/Sep/2016:14:21:21 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 27519 0.0010
+::1 - - [12/Sep/2016:14:21:22 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:21:22 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:21:22 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:21:22 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:21:22 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:21:22 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:21:22 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:22:42 ...done in 0.420948848 seconds.
+::1 - - [12/Sep/2016:14:22:45 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 27570 0.0010
+::1 - - [12/Sep/2016:14:22:45 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:22:45 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:22:45 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:22:45 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:22:45 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:22:45 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:22:45 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:23:24 ...done in 0.414890969 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:23:59 ...done in 0.416523888 seconds.
+::1 - - [12/Sep/2016:14:24:02 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 27624 0.0010
+::1 - - [12/Sep/2016:14:24:02 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:24:02 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:24:02 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:24:02 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:24:03 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:24:03 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:24:03 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:25:06 ...done in 0.421566478 seconds.
+::1 - - [12/Sep/2016:14:25:08 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 27684 0.0011
+::1 - - [12/Sep/2016:14:25:08 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:25:08 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:25:08 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:25:08 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:25:08 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:14:25:08 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:25:08 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0008
+      Regenerating: 1 file(s) changed at 2016-09-12 14:25:33 ...done in 0.422499353 seconds.
+::1 - - [12/Sep/2016:14:26:27 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 27689 0.0010
+      Regenerating: 1 file(s) changed at 2016-09-12 14:26:36 ...done in 0.423671424 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:26:54 ...done in 0.422003603 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:27:31 ...done in 0.427542647 seconds.
+::1 - - [12/Sep/2016:14:27:34 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 27687 0.0010
+::1 - - [12/Sep/2016:14:27:34 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:27:34 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:27:34 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:27:34 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:27:34 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:27:34 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:27:34 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:27:49 ...done in 0.42586297 seconds.
+::1 - - [12/Sep/2016:14:27:51 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 27707 0.0010
+::1 - - [12/Sep/2016:14:27:52 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:27:52 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:27:52 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:27:52 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:27:52 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:27:52 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:27:52 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:32:34 ...done in 0.423140178 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:32:43 ...done in 0.431130363 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:33:48 ...done in 0.43055195 seconds.
+::1 - - [12/Sep/2016:14:33:52 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28067 0.0011
+::1 - - [12/Sep/2016:14:33:52 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:33:52 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:33:52 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:33:52 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:33:52 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:33:52 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:33:52 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:34:03 ...done in 0.43541369 seconds.
+::1 - - [12/Sep/2016:14:34:06 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28064 0.0010
+::1 - - [12/Sep/2016:14:34:06 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:14:34:06 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:34:06 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:34:06 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:34:06 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:34:06 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:34:06 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:34:53 ...done in 0.431541639 seconds.
+::1 - - [12/Sep/2016:14:34:57 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28068 0.0011
+::1 - - [12/Sep/2016:14:34:57 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:34:57 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:34:57 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:34:57 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:34:57 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:34:57 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:34:57 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:36:07 ...done in 0.432795378 seconds.
+::1 - - [12/Sep/2016:14:36:09 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28090 0.0010
+::1 - - [12/Sep/2016:14:36:09 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:36:09 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:36:09 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:36:09 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:36:09 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:36:09 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:36:09 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:36:30 ...done in 0.435270239 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:36:34 ...done in 0.437060198 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:36:39 ...done in 0.440374902 seconds.
+::1 - - [12/Sep/2016:14:36:41 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28090 0.0013
+::1 - - [12/Sep/2016:14:36:41 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:36:41 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:36:41 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:36:41 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:36:41 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:36:41 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:36:42 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:40:47 ...done in 0.452652765 seconds.
+::1 - - [12/Sep/2016:14:40:52 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28093 0.0011
+::1 - - [12/Sep/2016:14:40:52 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:40:52 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:40:52 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:40:52 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:40:52 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:40:52 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0010
+::1 - - [12/Sep/2016:14:40:52 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:41:20 ...done in 0.430229017 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:41:39 ...done in 0.427962386 seconds.
+::1 - - [12/Sep/2016:14:41:42 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28326 0.0010
+::1 - - [12/Sep/2016:14:41:42 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:41:42 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:41:42 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:41:42 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:41:42 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:41:42 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:41:42 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:42:06 ...done in 0.441217909 seconds.
+::1 - - [12/Sep/2016:14:42:15 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28099 0.0011
+::1 - - [12/Sep/2016:14:42:15 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:42:15 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:42:15 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:42:15 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:42:15 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:42:15 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:42:15 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:43:36 ...done in 0.434160921 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:43:58 ...done in 0.434765247 seconds.
+::1 - - [12/Sep/2016:14:44:02 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28119 0.0010
+::1 - - [12/Sep/2016:14:44:02 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:44:02 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:44:02 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:44:02 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:44:02 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:44:02 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:44:02 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:44:36 ...done in 0.435497646 seconds.
+::1 - - [12/Sep/2016:14:44:38 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28138 0.0010
+::1 - - [12/Sep/2016:14:44:38 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:44:38 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:44:38 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:44:38 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:44:39 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:44:39 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:44:39 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:44:55 -0400] "GET /favicon.ico HTTP/1.1" 404 - 0.0015
+::1 - - [12/Sep/2016:14:44:59 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:46:01 ...error:
+[33m             Error: Pygments can't parse unknown language: &nbsp;&nbsp;&nbsp;.[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+::1 - - [12/Sep/2016:14:46:04 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:46:04 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:14:46:04 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:46:04 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:46:04 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:46:04 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:46:04 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:46:04 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:47:37 ...error:
+[33m             Error: Pygments can't parse unknown language: &nbsp;&nbsp;&nbsp;.[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+::1 - - [12/Sep/2016:14:47:39 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:47:40 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:47:40 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:47:40 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:47:40 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:47:40 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:47:40 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:47:40 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:47:48 ...done in 0.450770288 seconds.
+::1 - - [12/Sep/2016:14:47:50 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28181 0.0011
+::1 - - [12/Sep/2016:14:47:50 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:47:50 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:47:50 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:47:50 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:47:50 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:47:50 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:47:51 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0006
+      Regenerating: 1 file(s) changed at 2016-09-12 14:48:15 ...done in 0.441743117 seconds.
+::1 - - [12/Sep/2016:14:48:18 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28121 0.0011
+::1 - - [12/Sep/2016:14:48:18 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:48:18 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:48:18 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:48:18 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:48:18 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:48:18 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:48:18 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:48:37 ...done in 0.44328174 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:48:44 ...done in 0.443226101 seconds.
+::1 - - [12/Sep/2016:14:48:49 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28098 0.0012
+::1 - - [12/Sep/2016:14:48:49 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:48:49 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:48:49 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:48:49 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:48:49 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:48:49 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:48:49 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:49:49 ...done in 0.444831579 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:50:04 ...done in 0.449622559 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:51:15 ...done in 0.448875555 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:51:27 ...done in 0.447198157 seconds.
+::1 - - [12/Sep/2016:14:51:37 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28146 0.0011
+::1 - - [12/Sep/2016:14:51:37 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:51:37 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:51:37 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:51:37 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:51:37 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:51:37 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:51:37 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:52:17 ...done in 0.4470193 seconds.
+::1 - - [12/Sep/2016:14:52:21 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28182 0.0011
+::1 - - [12/Sep/2016:14:52:21 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:21 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:21 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:52:21 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:52:21 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:21 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:21 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:52:29 ...done in 0.456332013 seconds.
+::1 - - [12/Sep/2016:14:52:32 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28204 0.0011
+::1 - - [12/Sep/2016:14:52:32 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:32 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:52:32 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:32 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:52:32 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:32 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:52:32 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:52:42 ...done in 0.456145731 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:52:48 ...done in 0.451876216 seconds.
+::1 - - [12/Sep/2016:14:52:50 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28200 0.0011
+::1 - - [12/Sep/2016:14:52:50 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:52:50 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:52:50 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:52:50 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:50 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:52:50 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:52:50 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:52:58 ...done in 0.456898361 seconds.
+::1 - - [12/Sep/2016:14:53:00 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28188 0.0011
+::1 - - [12/Sep/2016:14:53:00 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:53:00 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:00 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:53:00 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:53:01 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:53:01 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:01 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0007
+      Regenerating: 1 file(s) changed at 2016-09-12 14:53:21 ...done in 0.459090024 seconds.
+::1 - - [12/Sep/2016:14:53:23 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28230 0.0011
+::1 - - [12/Sep/2016:14:53:23 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:53:23 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:23 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:23 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:23 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:53:23 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:24 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:53:36 ...done in 0.456812301 seconds.
+::1 - - [12/Sep/2016:14:53:38 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28242 0.0011
+::1 - - [12/Sep/2016:14:53:38 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:53:38 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:53:38 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:38 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:38 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:53:38 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:53:38 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:54:26 ...done in 0.460592289 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:54:48 ...done in 0.458255889 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:54:55 ...done in 0.460806246 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:55:31 ...done in 0.463653709 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:56:58 ...done in 0.461894228 seconds.
+::1 - - [12/Sep/2016:14:57:00 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28658 0.0011
+::1 - - [12/Sep/2016:14:57:00 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:57:00 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:57:00 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:57:00 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:57:00 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:57:00 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:57:01 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0010
+      Regenerating: 1 file(s) changed at 2016-09-12 14:58:03 ...done in 0.475235848 seconds.
+::1 - - [12/Sep/2016:14:58:08 -0400] "GET /favicon.ico HTTP/1.1" 404 - 0.0006
+::1 - - [12/Sep/2016:14:58:11 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28724 0.0012
+::1 - - [12/Sep/2016:14:58:11 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:14:58:11 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:11 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:11 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:58:11 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:11 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:58:12 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:58:40 ...done in 0.468465156 seconds.
+::1 - - [12/Sep/2016:14:58:47 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28773 0.0011
+::1 - - [12/Sep/2016:14:58:47 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:47 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:47 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:58:47 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:47 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:47 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:58:47 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:58:54 ...done in 0.466603603 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 14:58:54 ...done in 0.473764466 seconds.
+::1 - - [12/Sep/2016:14:58:56 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28748 0.0011
+::1 - - [12/Sep/2016:14:58:56 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:14:58:56 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:56 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:58:56 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:14:58:56 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:58:56 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:58:56 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:59:04 ...done in 0.47695857 seconds.
+::1 - - [12/Sep/2016:14:59:06 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28745 0.0011
+::1 - - [12/Sep/2016:14:59:06 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:59:06 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:59:06 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:59:06 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:59:06 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:14:59:06 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:14:59:06 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 14:59:54 ...done in 0.473033153 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:00:16 ...done in 0.474994958 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:00:17 ...done in 0.483604847 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:00:46 ...done in 0.482103656 seconds.
+::1 - - [12/Sep/2016:15:00:55 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28941 0.0015
+::1 - - [12/Sep/2016:15:00:55 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:00:55 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:00:55 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:00:55 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:00:55 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:00:55 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:00:55 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0008
+      Regenerating: 1 file(s) changed at 2016-09-12 15:02:04 ...done in 0.492465887 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:02:11 ...done in 0.484462099 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:02:42 ...done in 0.468957757 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:02:42 ...done in 0.472144031 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:02:46 ...done in 0.787303297 seconds.
+::1 - - [12/Sep/2016:15:02:49 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29030 0.0016
+::1 - - [12/Sep/2016:15:02:50 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:02:50 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:02:50 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:02:50 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:02:50 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:02:50 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:02:50 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:03:37 ...done in 0.470095255 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:03:40 ...done in 0.478132324 seconds.
+::1 - - [12/Sep/2016:15:03:42 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29049 0.0011
+::1 - - [12/Sep/2016:15:03:42 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:03:42 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:03:42 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:03:42 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:03:42 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:03:42 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:03:43 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:04:18 ...done in 0.47593971 seconds.
+::1 - - [12/Sep/2016:15:04:21 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29052 0.0011
+::1 - - [12/Sep/2016:15:04:21 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:04:21 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:04:21 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:04:21 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:04:21 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:04:21 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:04:21 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:08:00 ...done in 0.477616636 seconds.
+::1 - - [12/Sep/2016:15:08:03 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29038 0.0011
+::1 - - [12/Sep/2016:15:08:03 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:03 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:03 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:03 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:08:03 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:03 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:03 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:08:12 ...done in 0.479873508 seconds.
+::1 - - [12/Sep/2016:15:08:16 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29046 0.0011
+::1 - - [12/Sep/2016:15:08:16 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:16 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:08:16 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:16 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:08:16 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:08:16 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:08:16 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:08:32 ...done in 0.47832118 seconds.
+::1 - - [12/Sep/2016:15:08:35 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29062 0.0011
+::1 - - [12/Sep/2016:15:08:35 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:35 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:08:35 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:08:35 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:08:36 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:36 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:08:36 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:08:44 -0400] "GET /favicon.ico HTTP/1.1" 404 - 0.0006
+::1 - - [12/Sep/2016:15:08:47 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:09:12 ...done in 0.480890064 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:09:36 ...done in 0.479870808 seconds.
+::1 - - [12/Sep/2016:15:09:38 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29066 0.0011
+::1 - - [12/Sep/2016:15:09:38 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:09:38 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:09:38 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:09:38 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:09:39 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:09:39 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:09:39 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:09:55 ...done in 0.488165253 seconds.
+::1 - - [12/Sep/2016:15:09:58 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29066 0.0011
+::1 - - [12/Sep/2016:15:09:58 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:09:58 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:09:58 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0009
+::1 - - [12/Sep/2016:15:09:58 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:09:58 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:09:58 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:09:59 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:11:04 ...done in 0.485130184 seconds.
+::1 - - [12/Sep/2016:15:11:06 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29052 0.0016
+::1 - - [12/Sep/2016:15:11:07 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:11:07 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:11:07 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:11:07 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:11:07 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:11:07 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:11:07 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:11:21 ...done in 0.485655041 seconds.
+::1 - - [12/Sep/2016:15:11:24 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29058 0.0010
+::1 - - [12/Sep/2016:15:11:24 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:11:24 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:11:24 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:11:24 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:11:24 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:11:24 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:11:24 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0008
+      Regenerating: 1 file(s) changed at 2016-09-12 15:12:10 ...done in 0.488798625 seconds.
+::1 - - [12/Sep/2016:15:12:16 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29069 0.0011
+::1 - - [12/Sep/2016:15:12:16 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:12:16 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:12:16 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:12:16 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:12:16 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:12:16 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:12:16 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:12:53 ...done in 0.486304243 seconds.
+::1 - - [12/Sep/2016:15:12:55 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29088 0.0011
+::1 - - [12/Sep/2016:15:12:55 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:12:55 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:12:55 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:12:55 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:12:55 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:12:55 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:12:55 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:13:20 ...done in 0.486687726 seconds.
+::1 - - [12/Sep/2016:15:13:22 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28946 0.0016
+::1 - - [12/Sep/2016:15:13:22 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:13:22 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:13:22 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:13:22 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:13:22 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:13:22 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:13:23 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:13:55 ...done in 0.492628055 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:14:09 ...done in 0.495103947 seconds.
+::1 - - [12/Sep/2016:15:14:11 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 29082 0.0011
+::1 - - [12/Sep/2016:15:14:11 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:14:11 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:14:11 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:14:11 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:14:11 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:14:11 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:14:11 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:16:06 ...done in 0.492756369 seconds.
+::1 - - [12/Sep/2016:15:16:09 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28708 0.0011
+::1 - - [12/Sep/2016:15:16:09 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:09 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:09 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:09 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:16:10 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:16:10 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:10 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:16:21 ...done in 0.496575689 seconds.
+::1 - - [12/Sep/2016:15:16:25 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28710 0.0011
+::1 - - [12/Sep/2016:15:16:25 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:16:25 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:25 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:16:25 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:16:26 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:26 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:16:26 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:16:38 ...done in 0.497611698 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:16:41 ...done in 0.497142397 seconds.
+::1 - - [12/Sep/2016:15:16:43 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28691 0.0015
+::1 - - [12/Sep/2016:15:16:43 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:43 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:16:43 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:43 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:16:43 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:43 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:16:43 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:16:52 ...done in 0.500742636 seconds.
+::1 - - [12/Sep/2016:15:16:55 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28616 0.0010
+::1 - - [12/Sep/2016:15:16:55 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:16:55 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:55 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:16:55 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:16:55 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:16:55 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:16:55 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0008
+      Regenerating: 1 file(s) changed at 2016-09-12 15:17:34 ...done in 0.49989709 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:17:43 ...done in 0.506034274 seconds.
+::1 - - [12/Sep/2016:15:17:45 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28712 0.0011
+::1 - - [12/Sep/2016:15:17:45 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:17:45 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:17:45 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:17:45 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:17:46 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:17:46 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:17:46 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:18:04 ...done in 0.503005147 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:18:20 ...done in 0.503412736 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:19:31 ...done in 0.5045645 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:19:39 ...done in 0.500863781 seconds.
+::1 - - [12/Sep/2016:15:19:45 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28373 0.0011
+::1 - - [12/Sep/2016:15:19:45 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:19:45 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:19:45 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:19:45 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:19:45 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:19:45 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:19:45 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:22:24 ...done in 0.538419562 seconds.
+::1 - - [12/Sep/2016:15:22:27 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28545 0.0017
+::1 - - [12/Sep/2016:15:22:27 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:22:27 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0009
+::1 - - [12/Sep/2016:15:22:27 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:22:27 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:22:27 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:22:27 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:22:27 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:22:30 -0400] "GET /favicon.ico HTTP/1.1" 404 - 0.0008
+::1 - - [12/Sep/2016:15:22:32 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 304 - 0.0006
+      Regenerating: 1 file(s) changed at 2016-09-12 15:22:38 ...done in 0.507692067 seconds.
+::1 - - [12/Sep/2016:15:22:40 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28551 0.0016
+::1 - - [12/Sep/2016:15:22:41 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:22:41 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:22:41 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:22:41 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:22:41 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:22:41 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:22:41 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0008
+      Regenerating: 1 file(s) changed at 2016-09-12 15:22:54 ...done in 0.507318174 seconds.
+::1 - - [12/Sep/2016:15:22:56 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28556 0.0011
+::1 - - [12/Sep/2016:15:22:56 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:22:56 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:22:56 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:22:56 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:22:56 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:22:56 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:22:56 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0008
+      Regenerating: 1 file(s) changed at 2016-09-12 15:24:27 ...done in 0.512853471 seconds.
+::1 - - [12/Sep/2016:15:24:29 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28625 0.0011
+::1 - - [12/Sep/2016:15:24:29 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:24:29 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:24:29 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:24:29 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:24:30 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:24:30 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:24:30 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:24:38 ...done in 0.513512699 seconds.
+::1 - - [12/Sep/2016:15:24:40 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28631 0.0011
+::1 - - [12/Sep/2016:15:24:40 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:24:40 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:24:40 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:24:40 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:24:40 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:24:40 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:24:40 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:25:00 ...done in 0.513836782 seconds.
+::1 - - [12/Sep/2016:15:25:03 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28630 0.0011
+::1 - - [12/Sep/2016:15:25:03 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:25:03 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:25:03 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:25:03 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:25:03 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:25:03 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:25:03 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:25:24 ...done in 0.512161635 seconds.
+::1 - - [12/Sep/2016:15:25:27 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28636 0.0010
+::1 - - [12/Sep/2016:15:25:27 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:25:27 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:25:27 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:25:27 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:25:27 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:25:27 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:25:27 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:26:07 ...done in 0.528585557 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:26:07 ...done in 0.502695789 seconds.
+::1 - - [12/Sep/2016:15:26:11 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28695 0.0011
+::1 - - [12/Sep/2016:15:26:11 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:26:11 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:26:11 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:26:11 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:26:11 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:26:11 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:26:11 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0008
+      Regenerating: 1 file(s) changed at 2016-09-12 15:26:34 ...done in 0.501981648 seconds.
+::1 - - [12/Sep/2016:15:26:37 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28647 0.0011
+::1 - - [12/Sep/2016:15:26:37 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:26:37 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:26:37 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:26:37 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:26:37 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:26:37 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:26:37 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:26:55 ...done in 0.503555101 seconds.
+::1 - - [12/Sep/2016:15:26:57 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28695 0.0011
+::1 - - [12/Sep/2016:15:26:57 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:26:57 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:26:57 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:26:57 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:26:58 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:26:58 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:26:58 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:27:30 ...done in 0.509684265 seconds.
+::1 - - [12/Sep/2016:15:28:04 -0400] "GET /favicon.ico HTTP/1.1" 404 - 0.0006
+      Regenerating: 1 file(s) changed at 2016-09-12 15:28:25 ...done in 0.506015197 seconds.
+::1 - - [12/Sep/2016:15:28:29 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28721 0.0011
+::1 - - [12/Sep/2016:15:28:29 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:28:29 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:28:29 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:28:29 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:28:29 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:28:29 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:28:29 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:28:48 ...done in 0.509529654 seconds.
+::1 - - [12/Sep/2016:15:31:19 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28721 0.0010
+::1 - - [12/Sep/2016:15:31:19 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:31:19 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:31:19 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:31:19 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:31:20 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:31:20 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:31:20 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0005
+      Regenerating: 1 file(s) changed at 2016-09-12 15:31:55 ...done in 0.510370039 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:31:56 ...done in 0.512134773 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:32:17 ...done in 0.512285237 seconds.
+      Regenerating: 1 file(s) changed at 2016-09-12 15:34:49 ...done in 0.512984537 seconds.
+::1 - - [12/Sep/2016:15:35:50 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 200 28697 0.0011
+::1 - - [12/Sep/2016:15:35:50 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:35:50 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:35:50 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0007
+::1 - - [12/Sep/2016:15:35:50 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:35:51 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0008
+::1 - - [12/Sep/2016:15:35:51 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:35:51 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0010
+::1 - - [12/Sep/2016:15:38:10 -0400] "GET /blog/2016/09/01/c2c-blog/ HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:38:10 -0400] "GET /stylesheets/screen.css HTTP/1.1" 304 - 0.0006
+::1 - - [12/Sep/2016:15:38:10 -0400] "GET /javascripts/modernizr-2.0.js HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:38:10 -0400] "GET /javascripts/octopress.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:38:10 -0400] "GET /javascripts/github.js HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:38:11 -0400] "GET /images/line-tile.png?1472755185 HTTP/1.1" 304 - 0.0005
+::1 - - [12/Sep/2016:15:38:11 -0400] "GET /images/noise.png?1472755185 HTTP/1.1" 304 - 0.0004
+::1 - - [12/Sep/2016:15:38:11 -0400] "GET /javascripts/libs/jXHR.js HTTP/1.1" 304 - 0.0008
+      Regenerating: 1 file(s) changed at 2016-09-12 15:41:09 ...done in 0.522875218 seconds.
