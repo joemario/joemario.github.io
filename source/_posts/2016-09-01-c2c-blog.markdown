@@ -256,11 +256,8 @@ You can get those raw samples using "perf script".  See man perf-script.
 The output may be cryptic, but you can sort on the load weight (5th column) to see which loads suffered the most from false sharing contention and took the longest to execute.
 
 
-####Want to give it a spin?    
-You can grab the patches from Jiri Olsa's git repo at:  
-
-     git://git.kernel.org/pub/scm/linux/kernel/git/jolsa/perf.git  
-     branch perf/c2c  
+####Where to get it?   
+The perf c2c functionality is upstream as of the 4.2 kernel:  
 
 #### Lastly, this was a collective effort.  
 Although Don Zickus, Dick Fowles and Joe Mario worked together to get this implemented,
