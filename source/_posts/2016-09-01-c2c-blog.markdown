@@ -257,7 +257,7 @@ The output may be cryptic, but you can sort on the load weight (5th column) to s
 
 
 ####Where to get it?   
-The perf c2c functionality is upstream as of the 4.2 kernel:   
+The perf c2c functionality is upstream as of the 4.2 kernel.
 
 #### Lastly, this was a collective effort.  
 Although Don Zickus, Dick Fowles and Joe Mario worked together to get this implemented,
